@@ -1,0 +1,35 @@
+---
+---
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Background Swapper</title>
+        <meta title="Background Swapper">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/main.css" />
+    
+    <script>
+        function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+    </script>
+
+    </head>
+    
+    <body>
+
+        <h1><a id="homeNav" style="color: grey" href="http://moedus.github.io">Home</a></h1>
+
+        <div id="buttonWrap">
+            <button id="actionButton" onclick="document.body.style.background = getRandomColor() ">Press me</button>
+        </div>
+    </body>
+
+</html>

@@ -7,8 +7,9 @@
 	background-color: aliceblue;
 }
 
-/* Solar Code */
-
+/* =================================================
+					Solar Code
+================================================== */
 
 #solarCode html,
 #solarCode body {
@@ -87,6 +88,43 @@
        -o-animation: spin-right 20s linear infinite;
           animation: spin-right 20s linear infinite;
 }
+
+/* =================================================
+				Centered Action Button
+================================================== */
+
+#actionButton {
+	width: 150px;
+	height: 75px;
+	background-color: yellow;
+	border-radius: 5px;
+	
+	font-size: 24px;
+	text-align: center;
+	color: #6b6464;
+}
+
+#actionButton p {
+	padding-top: 15%;
+}
+
+#actionButton:hover {
+	background-color: brown;
+	color: #ffffff;
+}
+
+#buttonWrap {
+	max-width: 100%;
+	margin: 30% auto;
+	text-align: center;
+
+}
+
+
+/* =================================================
+					Animations
+================================================== */
+
 
 @-webkit-keyframes spin-right {
   100% {
