@@ -2,42 +2,67 @@
 ---
 <!DOCTYPE html>
 
-<html id="trumpisms">
+<html>
     <head>
-        <title>Solar Code</title>
-        <meta title="Did Trump Say it?">
+        <title>Trumpisms</title>
+        <meta title="Trumpisms">
+        <meta description="America's favourite demagogue says some incredibly horrible things.">
+        <meta image="/assets/images/Trumpisms preview">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/main.css" />
     
-     <script>
-        var currentQuote;
-
-        function getTrumpQuote() {
-        var quotes =    (
-                            hello,
-                            hi there
-                        );
+         <script>
         
-        var displayQuote += quotes[Math.floor(Math.random() * 2)];
-        }
-        return currentQuote = displayQuote;
-        }
+        // Create an array and populate with quotes
+            var trumpQuotes = [
+                                "\"You know, it really doesn’t matter what the media write as long as you’ve got a young, and beautiful piece of ass\"",
+                                "\"Part of the beauty of me is that I am very rich.\"",
+                                "\"When I think I’m right, nothing bothers me.\"",
+                                "\"I have a great relationship with the blacks.\"",
+                                "\"I believe [the media] like making me out to be something more sinister than I really am.\"",
+                                "\"I will be so good at the military your head will spin.\"",
+                                "\"No, I’m not into anal.\"",
+                                "\"I don’t even consider myself ambitious.\"",
+                                "\"As everybody knows, but the haters & losers refuse to acknowledge, I do not wear a “wig.” My hair may not be perfect but it’s mine.\"",
+                                "\"I love Oprah. Oprah would always be my first choice [for Vice President]\"",
+                                "\"Well, someone’s doing the raping, Don! I mean, somebody’s doing it. Who’s doing the raping? Who’s doing the raping?\"",
+                                "\“I think if this country gets any kinder or gentler, it’s literally going to cease to exist.\"",
+                                "\“I will be the greatest jobs president God ever created.\"",
+                                "\“Perhaps I shouldn’t campaign at all, I’ll just, you know, I’ll ride it right into the White House.\"",
+                                "\“How stupid are the people of Iowa?\"",
+                                "\"I'd like to hear his wife say something,\" - Trump told " + '<a target="blank" href="http://mobile.nytimes.com/2016/07/30/opinion/trumps-thunderbolts.html?_r=0">The New York Times</a>' + " in response to criticism from the Muslim father of a deceased Army hero.",
+                                "\"Incredible.\""
+                                
+                                ];
+        // Pick a random quote from the trumpQuotes array
+            function getTrumpQuote() {
+                var n = trumpQuotes.length - 1;
+                var randomQuote = trumpQuotes[Math.floor(Math.random() * n)];
 
-        function getCurrentQuote() {
-            return currentQuote;
-        }
-    </script>
+        // Update the displayed quote to the newly selected random Quote 
+            document.getElementById("displayedQuote").innerHTML = randomQuote;
+            document.getElementById("actionButton").innerHTML = "Keep Going";
+            }
+
+        </script>
 
     </head>
     
-    <body>
-    <h1><a id="homeNav" style="color: white" href="http://moedus.github.io">Home</a></h1>
+    <body id="trumpBG" background="/assets/images/Trumpism.svg">
         
+        <h3 style="color: #6b6464; ">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></h3>
 
+    <!-- Button to activate getTrumpQuote -->
         <div id="buttonWrap">
-            <button id="actionButton" onclick="document.getElementById("currentQuote") ">Yes</button>
+            <button id="actionButton" onclick="getTrumpQuote()">Start</button>
         </div>
         
+    <!-- Display current Trump quote in a text area -->
+        <div id="quoteWrap">
+            <p id="displayedQuote"></p>
+        </div>
+
+
     </body>
 </html>
