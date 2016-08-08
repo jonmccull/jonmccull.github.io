@@ -4,23 +4,24 @@
 
 <html>
     <head>
-        <title>Trumpisms</title>
-        <meta title="Trumpisms">
+        <title>Did Trump Say It?</title>
+        <meta title="Did Trump Say It?">
         <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
         <meta image="https://moedus.github.io/assets/images/Trumpisms_p">
 
-        <meta property="og:title" content="Trumpisms" />
-        <meta property="og:url" content="https://moedus.github.io/3-trumpisms.html" />
+        <meta property="og:title" content="Did Trump Say It?" />
+        <meta property="og:url" content="https://moedus.github.io/4-didTrumpSayIt.html" />
         <meta property="og:image" content="https://moedus.github.io/assets/images/Trumpisms_p" />
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/main.css" />
-    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
          <script>
         
-        // Create an array and populate with quotes
-            var trumpQuotes = [
+            // Create an array of Trump Quotes
+            trumpQuotes = [
                                 "\"You know, it really doesn’t matter what the media write as long as you’ve got a young, and beautiful piece of ass\"",
                                 "\"Part of the beauty of me is that I am very rich.\"",
                                 "\"When I think I’m right, nothing bothers me.\"",
@@ -43,38 +44,95 @@
                                 "\"They’re rapists. And some, I assume, are good people.\"",
                                 "\"If Hillary Clinton can’t satisfy her husband what makes her think she can satisfy America.\"",
                                 "\"Today I officially declare my candidacy for President of the United States.\""
-                                
                                 ];
-        // Pick a random quote from the trumpQuotes array
+            // Create an array of non-Trump Quotes
+            notTrumpQuotes = [
+                                    "\"Not a Trump Quote\"",
+                                    "\"Not a Trump Quote\"",
+                                    "\"Not a Trump Quote\""
+                                ];
+
+            // Select random array
+            function getQuote() {
+                var randomNum = Math.floor((Math.random() * 10) + 1); // Generate a random number between 1-10
+                if ((randomNum % 2) == 0) { getTrumpQuote() } else { getNotTrumpQuote() }
+                quotePick = randomNum;
+            }
+
+            // Check the user's answer
+            function checkAnswer(buttonPick) {
+
+                // User picked correct answer - Case 1 & 4
+                if ((quotePick % 2 == 0) && (buttonPick == true) || ((quotePick % 2) != 0) && (buttonPick == false)) {
+                    document.getElementById("sanityCheck").innerHTML = "Correct";
+                    
+                    getQuote();
+                }
+                // User picked incorrect answer - Case 2 & 3
+                else {
+                    document.getElementById("sanityCheck").innerHTML = "Incorrect";
+
+                    getQuote();
+                }
+            }
+
+            // Pick a random Trump quote
             function getTrumpQuote() {
                 var n = trumpQuotes.length - 1;
                 var randomQuote = trumpQuotes[Math.floor(Math.random() * n)];
+                document.getElementById("displayedQuote").innerHTML = randomQuote;
+            }
 
-        // Update the displayed quote to the newly selected random Quote 
-            document.getElementById("displayedQuote").innerHTML = randomQuote;
-            document.getElementById("actionButton").innerHTML = "Keep Going";
+            // Pick a random non-Trump quote
+            function getNotTrumpQuote() {
+                var n = notTrumpQuotes.length - 1;
+                var randomQuote = notTrumpQuotes[Math.floor(Math.random() * n)];
+                document.getElementById("displayedQuote").innerHTML = randomQuote;
+            }
+
+            function setDefault() {
+                $("#actionButtonTrump-true").addClass('defaultButtonState');
+                $("#actionButtonTrump-false").addClass('defaultButtonState');
+            }
+
+            function correctAnswer(buttonPick) {
+                
+               
+
             }
 
         </script>
-
     </head>
     
-    <body id="trumpBG" background="/assets/images/Trumpism.svg">
-        
-        <h3 style="color: #6b6464; ">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></h3>
-
-        <h1 style="text-align: center; font-style: bold ">Trumpisms</h1>
+    <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="getQuote(); setDefault()">
+    
+    <div id="container-half"></div>
+    <!-- Title -->
+        <h1 style="text-align: center; font-style: bold ">Did Trump Say It?</h1>
+    <!-- Spacer -->    
+        <div id="container-full"></div>
 
     <!-- Button to activate getTrumpQuote -->
-        <div id="buttonWrap">
-            <button id="actionButton" onclick="getTrumpQuote()">Start</button>
+        <div id="buttonWrapTrump">
+            <button id="actionButtonTrump-true" onclick="checkAnswer(true)">Trump</button>
         </div>
-        
+
+        <div id="buttonWrapTrump">
+            <button id="actionButtonTrump-false" onclick="checkAnswer(false)">Not Trump</button>
+        </div>
+    <!-- Spacer-->        
+        <div id="container-half"></div>
+    
     <!-- Display current Trump quote in a text area -->
         <div id="quoteWrap">
             <p id="displayedQuote"></p>
         </div>
+    
+    <!-- Spacer-->        
+        <div id="container-half"></div>
 
-
+    <!-- Sanity Check -->    
+    <div id="quoteWrap"></div>
+        <p id="sanityCheck"></p>
     </body>
 </html>
