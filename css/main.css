@@ -157,6 +157,11 @@
 
 .defaultButtonState {
   background-color: rgba(71,129,255,1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .correctAnswer {

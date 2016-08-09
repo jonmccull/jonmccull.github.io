@@ -1,0 +1,55 @@
+---
+---
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Did Trump Say It?</title>
+        <meta title="Did Trump Say It?">
+        <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
+        <meta image="https://moedus.github.io/assets/images/Trumpisms_p">
+
+        <meta property="og:title" content="Did Trump Say It?" />
+        <meta property="og:url" content="https://moedus.github.io/4-didTrumpSayIt.html" />
+        <meta property="og:image" content="https://moedus.github.io/assets/images/Trumpisms_p" />
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="/css/main.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/trump-quotes.js"></script>
+    </head>
+    
+    <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="createQuoteLibrary(); setDefault(); getQuote()">
+    
+    <div id="container-half"></div>
+    <!-- Title -->
+        <h1 style="text-align: center; font-style: bold ">Did Trump Say It?</h1>
+    <!-- Spacer -->    
+        <div id="container-full"></div>
+
+    <!-- Button to activate getTrumpQuote -->
+        <div id="buttonWrapTrump">
+            <button id="actionButtonTrump-true" onclick="result(1)">Trump</button>
+        </div>
+
+        <div id="buttonWrapTrump">
+            <button id="actionButtonTrump-false" onclick="result(0)">Not Trump</button>
+        </div>
+    <!-- Spacer-->        
+        <div id="container-half"></div>
+    
+    <!-- Display current Trump quote in a text area -->
+        <div id="quoteWrap">
+            <p id="displayedQuote"></p>
+        </div>
+    
+    <!-- Spacer-->        
+        <div id="container-half"></div>
+
+    <!-- Sanity Check -->    
+    <div id="quoteWrap"></div>
+        <p id="sanityCheck"></p>
+    </body>
+</html>

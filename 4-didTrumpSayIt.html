@@ -15,90 +15,119 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" href="/css/main.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          
 
-         <script>
+        <script>
+
+/* =================================================
+                    Did Trump Say It?
+================================================== */
+
+// Create an array of Trump Quotes
+
+function createQuoteLibrary() {
+    trumpQuotes = [
+                    "\"You know, it really doesn’t matter what the media write as long as you’ve got a young, and beautiful piece of ass\"",
+                    "\"Part of the beauty of me is that I am very rich.\"",
+                    "\"When I think I’m right, nothing bothers me.\"",
+                    "\"I have a great relationship with the blacks.\"",
+                    "\"I believe [the media] like making me out to be something more sinister than I really am.\"",
+                    "\"I will be so good at the military your head will spin.\"",
+                    "\"No, I’m not into anal.\"",
+                    "\"I don’t even consider myself ambitious.\"",
+                    "\"As everybody knows, but the haters & losers refuse to acknowledge, I do not wear a “wig.” My hair may not be perfect but it’s mine.\"",
+                    "\"I love Oprah. Oprah would always be my first choice [for Vice President]\"",
+                    "\"Well, someone’s doing the raping, Don! I mean, somebody’s doing it. Who’s doing the raping? Who’s doing the raping?\"",
+                    "\“I think if this country gets any kinder or gentler, it’s literally going to cease to exist.\"",
+                    "\“I will be the greatest jobs president God ever created.\"",
+                    "\“Perhaps I shouldn’t campaign at all, I’ll just, you know, I’ll ride it right into the White House.\"",
+                    "\“How stupid are the people of Iowa?\"",
+                    "\"I'd like to hear his wife say something,\" - Trump told " + '<a target="blank" href="http://mobile.nytimes.com/2016/07/30/opinion/trumps-thunderbolts.html?_r=0">The New York Times</a>' + " in response to criticism from the Muslim father of a deceased Army hero.",
+                    "\"Incredible.\"",
+                    "\“Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don’t feel so stupid or insecure, it’s not your fault\"",
+                    "\"My fingers are long and beautiful, as, it has been well been documented, are various other parts of my body.\"",
+                    "\"They’re rapists. And some, I assume, are good people.\"",
+                    "\"If Hillary Clinton can’t satisfy her husband what makes her think she can satisfy America.\"",
+                    "\"Today I officially declare my candidacy for President of the United States.\""
+                    ];
+    // Create an array of non-Trump Quotes
+    notTrumpQuotes = [
+                        "\"Not a Trump Quote\"",
+                        "\"Not a Trump Quote\"",
+                        "\"Not a Trump Quote\""
+                    ];
+} 
+
+// Select random array
+function getQuote() {
+    var randomNum = Math.floor((Math.random() * 10) + 1); // Generate a random number between 1-10
+    if ((randomNum % 2) == 0) {
+        getTrumpQuote();
+        quotePick = true;
+        var buttonPick;
+    } 
+    else {
+        getNotTrumpQuote();
+        quotePick = false;
+        var buttonPick;
+    }
+}
+
+// Check the user's answer
+function checkAnswer(buttonPick) {
+
+    // User picked correct answer - Case 1
+    if (Boolean(quotePick) && Boolean(buttonPick)) {
+        document.getElementById("sanityCheck").innerHTML = "Correct";
         
-            // Create an array of Trump Quotes
-            trumpQuotes = [
-                                "\"You know, it really doesn’t matter what the media write as long as you’ve got a young, and beautiful piece of ass\"",
-                                "\"Part of the beauty of me is that I am very rich.\"",
-                                "\"When I think I’m right, nothing bothers me.\"",
-                                "\"I have a great relationship with the blacks.\"",
-                                "\"I believe [the media] like making me out to be something more sinister than I really am.\"",
-                                "\"I will be so good at the military your head will spin.\"",
-                                "\"No, I’m not into anal.\"",
-                                "\"I don’t even consider myself ambitious.\"",
-                                "\"As everybody knows, but the haters & losers refuse to acknowledge, I do not wear a “wig.” My hair may not be perfect but it’s mine.\"",
-                                "\"I love Oprah. Oprah would always be my first choice [for Vice President]\"",
-                                "\"Well, someone’s doing the raping, Don! I mean, somebody’s doing it. Who’s doing the raping? Who’s doing the raping?\"",
-                                "\“I think if this country gets any kinder or gentler, it’s literally going to cease to exist.\"",
-                                "\“I will be the greatest jobs president God ever created.\"",
-                                "\“Perhaps I shouldn’t campaign at all, I’ll just, you know, I’ll ride it right into the White House.\"",
-                                "\“How stupid are the people of Iowa?\"",
-                                "\"I'd like to hear his wife say something,\" - Trump told " + '<a target="blank" href="http://mobile.nytimes.com/2016/07/30/opinion/trumps-thunderbolts.html?_r=0">The New York Times</a>' + " in response to criticism from the Muslim father of a deceased Army hero.",
-                                "\"Incredible.\"",
-                                "\“Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don’t feel so stupid or insecure, it’s not your fault\"",
-                                "\"My fingers are long and beautiful, as, it has been well been documented, are various other parts of my body.\"",
-                                "\"They’re rapists. And some, I assume, are good people.\"",
-                                "\"If Hillary Clinton can’t satisfy her husband what makes her think she can satisfy America.\"",
-                                "\"Today I officially declare my candidacy for President of the United States.\""
-                                ];
-            // Create an array of non-Trump Quotes
-            notTrumpQuotes = [
-                                    "\"Not a Trump Quote\"",
-                                    "\"Not a Trump Quote\"",
-                                    "\"Not a Trump Quote\""
-                                ];
+        getQuote();
+    }
+    // User picked correct answer - Case 4
+    if (Boolean(!quotePick) && Boolean(!buttonPick)) {
+        document.getElementById("sanityCheck").innerHTML = "Correct";
+        
+        getQuote();
+    }
+    // Case 2
+    if (Boolean(!quotePick) && Boolean(buttonPick)) {
+        document.getElementById("sanityCheck").innerHTML = "Incorrect";
+        
+        getQuote();
+    }
+    // Case 3
+    if (Boolean(quotePick) && Boolean(!buttonPick)) {
+        document.getElementById("sanityCheck").innerHTML = "Incorrect";
+        
+        getQuote();
+    }
+}
 
-            // Select random array
-            function getQuote() {
-                var randomNum = Math.floor((Math.random() * 10) + 1); // Generate a random number between 1-10
-                if ((randomNum % 2) == 0) { getTrumpQuote() } else { getNotTrumpQuote() }
-                quotePick = randomNum;
-            }
+// Pick a random Trump quote
+function getTrumpQuote() {
+    var n = trumpQuotes.length - 1;
+    var randomQuote = trumpQuotes[Math.floor(Math.random() * n)];
+    document.getElementById("displayedQuote").innerHTML = randomQuote;
+}
 
-            // Check the user's answer
-            function checkAnswer(buttonPick) {
+// Pick a random non-Trump quote
+function getNotTrumpQuote() {
+    var n = notTrumpQuotes.length - 1;
+    var randomQuote = notTrumpQuotes[Math.floor(Math.random() * n)];
+    document.getElementById("displayedQuote").innerHTML = randomQuote;
+}
 
-                // User picked correct answer - Case 1 & 4
-                if ((quotePick % 2 == 0) && (buttonPick == true) || ((quotePick % 2) != 0) && (buttonPick == false)) {
-                    document.getElementById("sanityCheck").innerHTML = "Correct";
-                    
-                    getQuote();
-                }
-                // User picked incorrect answer - Case 2 & 3
-                else {
-                    document.getElementById("sanityCheck").innerHTML = "Incorrect";
-
-                    getQuote();
-                }
-            }
-
-            // Pick a random Trump quote
-            function getTrumpQuote() {
-                var n = trumpQuotes.length - 1;
-                var randomQuote = trumpQuotes[Math.floor(Math.random() * n)];
-                document.getElementById("displayedQuote").innerHTML = randomQuote;
-            }
-
-            // Pick a random non-Trump quote
-            function getNotTrumpQuote() {
-                var n = notTrumpQuotes.length - 1;
-                var randomQuote = notTrumpQuotes[Math.floor(Math.random() * n)];
-                document.getElementById("displayedQuote").innerHTML = randomQuote;
-            }
-
-            function setDefault() {
-                $("#actionButtonTrump-true").addClass('defaultButtonState');
-                $("#actionButtonTrump-false").addClass('defaultButtonState');
+function setDefault() {
+                $('#actionButtonTrump-true').addClass('defaultButtonState');
+                $("#actionButtonTrump-false").addClass("defaultButtonState");
             }
 
         </script>
     </head>
     
-    <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="getQuote(); setDefault()">
+    <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="createQuoteLibrary(); getQuote(); setDefault()">
     
     <div id="container-half"></div>
     <!-- Title -->
