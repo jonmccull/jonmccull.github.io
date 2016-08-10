@@ -17,15 +17,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="/css/main.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="/trump-quotes.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="/scripts/trump-quotes.js"></script>
     </head>
     
-    <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="createQuoteLibrary(); setDefault(); getQuote()">
+    <!-- background="/assets/images/Trumpism.svg" -->
+
+    <body id="trumpBG" onload="createQuoteLibrary(); setDefault(); getQuote()">
     
-    <div id="container-half"></div>
+    <div id="container-half headerNotification"></div>
     <!-- Title -->
-        <h1 style="text-align: center; font-style: bold ">Did Trump Say It?</h1>
+        <h1 style="text-align: center; font-style: bold; color: #696a6b; ">Did Trump Say It?</h1>
     <!-- Spacer -->    
         <div id="container-full"></div>
 

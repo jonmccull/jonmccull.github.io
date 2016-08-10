@@ -9,38 +9,39 @@ function createQuoteLibrary() {
                         "\"I believe [the media] like making me out to be something more sinister than I really am.\"",
                         "\"I will be so good at the military your head will spin.\"",
                         "\"No, I’m not into anal.\"",
-                        "\"I don’t even consider myself ambitious.\"",
+                        "\"It's freezing and snowing in New York - we need global warming!\"",
                         "\"As everybody knows, but the haters & losers refuse to acknowledge, I do not wear a “wig.” My hair may not be perfect but it’s mine.\"",
-                        "\"I love Oprah. Oprah would always be my first choice [for Vice President]\"",
                         "\"Well, someone’s doing the raping, Don! I mean, somebody’s doing it. Who’s doing the raping? Who’s doing the raping?\"",
                         "\“I think if this country gets any kinder or gentler, it’s literally going to cease to exist.\"",
-                        "\“I will be the greatest jobs president God ever created.\"",
                         "\“Perhaps I shouldn’t campaign at all, I’ll just, you know, I’ll ride it right into the White House.\"",
                         "\“How stupid are the people of Iowa?\"",
-                        "\"I'd like to hear his wife say something,\" - Trump told " + '<a target="blank" href="http://mobile.nytimes.com/2016/07/30/opinion/trumps-thunderbolts.html?_r=0">The New York Times</a>' + " in response to criticism from the Muslim father of a deceased Army hero.",
-                        "\"Incredible.\"",
+                        "\"I think the only difference between me and other candidates is that I'm more honest and my women are more beautiful.\"",
                         "\“Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don’t feel so stupid or insecure, it’s not your fault\"",
                         "\"My fingers are long and beautiful, as, it has been well been documented, are various other parts of my body.\"",
                         "\"They’re rapists. And some, I assume, are good people.\"",
-                        "\"If Hillary Clinton can’t satisfy her husband what makes her think she can satisfy America.\"",
-                        "\"Today I officially declare my candidacy for President of the United States.\""
+                        "\"If Hillary Clinton can’t satisfy her husband what makes her think she can satisfy America.\""
                     ];
 // Create an array of non-Trump Quotes
     notTrumpQuotes = [
                         "\"What's the deal with Canadians anyway?\"",
                         "\"Bernie is a tired socialist who should retire already.\"",
-                        "\"Putin is the man.\"",
+                        "\"Putin is an impressive guy. Smart guy. We just need to make some good deals and it'll be alright over there.\"",
                         "\"Listen. Russia are doing a great job, okay?\"",
                         "\"No one needs free healthcare. What is this, Cuba?\"",
                         "\"A vote for Hillary is like putting a gun to your head and pulling the trigger.\"",
-                        "\"I'm proud of my daughter, Ivanka. She's pretty hot, right?\""
+                        "\"I'm proud of my daughter, Ivanka. She's pretty hot, right?\"",
+                        "\"I don't trust atheists.\"",
+                        "\"You know what? I'd literally never heard of the Crimea until last week.\"",
+                        "\"NASA has done some good stuff – incredible – but what have they done for us lately?\"",
+                        "\"Climate change is made up. Really, we're going to tax the hell out of clean energy.\"",
+                        "\"I think it would be pretty fun to be the last President ever.\""
                     ];
 }
 
 // Set default button state
 function setDefault() {
-    $('#actionButtonTrump-true') .removeClass('correctAnswer') .addClass('defaultButtonState');
-    $("#actionButtonTrump-false") .removeClass('correctAnswer') .addClass("defaultButtonState");
+    $('#actionButtonTrump-true') .addClass('defaultButtonState');
+    $("#actionButtonTrump-false") .addClass("defaultButtonState");
 }
 
 // Select random array
@@ -66,19 +67,46 @@ function getNotTrumpQuote() {
 
 function result(response) {
     if (localStorage.getItem("answer") == response) {
-        if (response == 1) { console.log("Correct answer by clicking Trump") }
-        if (response == 0) { console.log("Correct answer by clicking not Trump") }
+        if (response == 1) { 
+            console.log("Correct answer by clicking Trump");
+            $(document).ready(function(){
+                $("#actionButtonTrump-true").removeClass("defaultButtonState") .addClass("correctAnswer", function() {
+                    $("#actionButtonTrump-true").removeClass("correctAnswer", 500, function(){
+                    $("#actionButtonTrump-true").addClass("defaultButtonState") })
+                });
+            });
+        }
+        if (response == 0) { console.log("Correct answer by clicking not Trump")
+            $(document).ready(function(){
+                $("#actionButtonTrump-false").removeClass("defaultButtonState") .addClass("correctAnswer", function() {
+                    $("#actionButtonTrump-false").removeClass("correctAnswer", 500, function(){
+                    $("#actionButtonTrump-false").addClass("defaultButtonState") })
+                });
+            });
+        }
         
         localStorage.clear();
         getQuote();
-        setDefault();
     } else {
-        if (response == 1) { console.log("Incorrect answer by clicking Trump") }
-        if (response == 0) { console.log("Incorrect answer by clicking not Trump") }
+        if (response == 1) { console.log("Incorrect answer by clicking Trump") 
+            $(document).ready(function(){
+                $("#actionButtonTrump-true").removeClass("defaultButtonState") .addClass("incorrectAnswer", function() {
+                    $("#actionButtonTrump-true").removeClass("incorrectAnswer", 500, function(){
+                    $("#actionButtonTrump-true").addClass("defaultButtonState") })
+                });
+            });
+        }
+        if (response == 0) { console.log("Incorrect answer by clicking not Trump")
+            $(document).ready(function(){
+                $("#actionButtonTrump-false").removeClass("defaultButtonState") .addClass("incorrectAnswer", function() {
+                    $("#actionButtonTrump-false").removeClass("incorrectAnswer", 500, function(){
+                    $("#actionButtonTrump-false").addClass("defaultButtonState") })
+                });
+            });
+        }
 
         localStorage.clear();
-        getQuote();
-        setDefault();
+        getQuote();   
     }
 }
 
