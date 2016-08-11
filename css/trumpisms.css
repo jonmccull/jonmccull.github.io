@@ -1,0 +1,142 @@
+---
+---
+@charset "utf-8";
+
+/* =================================================
+    Trumpisms + Trump or Not
+================================================== */
+
+p, h2, h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+
+#actionButton {
+  width: 150px;
+  height: 75px;
+  background-color: #b8ffac;
+  border-radius: 5px;
+  
+  font-size: 24px;
+  text-align: center;
+  color: #6b6464;
+}
+
+#actionButton p {
+  padding-top: 15%;
+}
+
+#actionButton:hover {
+  background-color: brown;
+  color: #ffffff;
+}
+
+#buttonWrap {
+  max-width: 100%;
+  margin: 10% auto;
+  text-align: center;
+}
+
+#displayedQuote {
+  width: 100%;
+  font-size: 32px;
+  font-style: italic;
+}
+
+#quoteWrap {
+  max-width: 100%;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+#trumpBG {
+  background: url(/assets/images/Trumpism.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#actionButtonTrump-true,
+#actionButtonTrump-false {
+  width: 250px;
+  height: 75px;
+  border-radius: 5px;
+  display: inline;
+  
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
+#actionButtonTrump-true:active,
+#actionButtonTrump-true:focus,
+#actionButtonTrump-false:active,
+#actionButtonTrump-false:focus {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#actionButtonTrump-true p,
+#actionButtonTrump-false p {
+  padding-top: 15%;
+}
+
+/*
+#actionButtonTrump-true:hover,
+#actionButtonTrump-false:hover {
+  background-color: rgba(55,101,200,1);
+  color: #ffffff;
+}
+*/
+
+#buttonWrapTrump {
+  width: 49%;
+  max-width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+.defaultButtonState {
+  background-color: rgba(71,129,255,1);
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.correctAnswer {
+  background-color: rgba(57,254,102,1);
+  -webkit-transition: all 0.0s ease;
+  -moz-transition: all 0.0s ease;
+  -o-transition: all 0.0s ease;
+  -ms-transition: all 0.0s ease;
+  transition: all 0.0s ease;
+}
+
+.incorrectAnswer {
+  background-color: rgba(255,72,72,1);
+  -webkit-transition: all 0.0s ease;
+  -moz-transition: all 0.0s ease;
+  -o-transition: all 0.0s ease;
+  -ms-transition: all 0.0s ease;
+  transition: all 0.0s ease;
+}
+
+#container-full {
+  max-width: 100%;
+  margin: 10% auto;
+}
+
+#container-half {
+  max-width: 100%;
+  margin: 5% auto;
+}
