@@ -2,9 +2,14 @@
 ---
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Did Trump Say It?</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/trumpisms.css" />
+
         <meta title="Did Trump Say It?">
         <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
         <meta image="https://moedus.github.io/assets/images/Trumpisms_p">
@@ -16,7 +21,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="/css/trumpisms.css" />
+        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
         
@@ -130,22 +135,22 @@ function setDefault() {
     
     <body id="trumpBG" background="/assets/images/Trumpism.svg" onload="createQuoteLibrary(); getQuote(); setDefault()">
     
-    <div id="container-half"></div>
+    <div class="container-half"></div>
     <!-- Title -->
         <h1 style="text-align: center; font-style: bold ">Did Trump Say It?</h1>
     <!-- Spacer -->    
-        <div id="container-full"></div>
+        <div class="container-full"></div>
 
     <!-- Button to activate getTrumpQuote -->
-        <div id="buttonWrapTrump">
+        <div class="buttonWrapTrump">
             <button id="actionButtonTrump-true" onclick="checkAnswer(true)">Trump</button>
         </div>
 
-        <div id="buttonWrapTrump">
+        <div class="buttonWrapTrump">
             <button id="actionButtonTrump-false" onclick="checkAnswer(false)">Not Trump</button>
         </div>
     <!-- Spacer-->        
-        <div id="container-half"></div>
+        <div class="container-half"></div>
     
     <!-- Display current Trump quote in a text area -->
         <div id="quoteWrap">
@@ -153,7 +158,7 @@ function setDefault() {
         </div>
     
     <!-- Spacer-->        
-        <div id="container-half"></div>
+        <div class="container-half"></div>
 
     <!-- Sanity Check -->    
     <div id="quoteWrap"></div>

@@ -2,35 +2,35 @@
 ---
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Background Swapper</title>
-        
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/main.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta title="Background Swapper">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Background Swapper</title>
 
-    <script>
-        function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-        }
-    </script>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    
-    <body>
+<script>
+  function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++ ) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+  }
+</script>
 
-        <h1><a id="homeNav" style="color: grey" href="jonmccull.github.io">Home</a></h1>
+</head>
 
-        <div id="buttonWrap">
-            <button id="actionButton" onclick="document.body.style.background = getRandomColor() ">Press me</button>
-        </div>
-    </body>
+<body>
+
+    <h1><a id="homeNav" style="color: grey" href="http://jonmccull.github.io">Home</a></h1>
+
+    <div class="buttonWrap">
+        <button class="actionButton" onclick="document.body.style.background = getRandomColor() ">Press me</button>
+    </div>
+</body>
 
 </html>

@@ -2,52 +2,46 @@
 ---
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Did Trump Say It?</title>
-        <meta title="Did Trump Say It?">
-        <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
-        <meta image="https://jonmccull.github.io/assets/images/Trumpisms_p">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Did Trump Say It?</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/trumpisms.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-        <meta property="og:title" content="Did Trump Say It?" />
-        <meta property="og:url" content="https://jonmccull.github.io/" />
-        <meta property="og:image" content="https://jonmccull.github.io/assets/images/Trumpisms_p" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/css/trumpisms.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/trump-quotes.js"></script>
+</head>
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="/scripts/trump-quotes.js"></script>
-    </head>
-
-    <body id="trumpBG" onload="createQuoteLibrary(); setDefault(); getQuote()">
-    
+<body id="trumpBG" onload="createQuoteLibrary(); setDefault(); getQuote()">
+<header>
     <p id="navHome" style="color: #696a6b"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+</header>
 
-    <div id="container-half"></div>
-        
-        <h1 style="text-align: center; font-style: bold; color: #696a6b; ">Did Trump Say It?</h1>
-  
-        <div id="container-full"></div>
-
-        <div id="buttonWrapTrump">
-            <button id="actionButtonTrump-true" onclick="result(1)">Trump</button>
-        </div>
-
-        <div id="buttonWrapTrump">
-            <button id="actionButtonTrump-false" onclick="result(0)">Not Trump</button>
-        </div>
-          
-        <div id="container-half"></div>
+<div class="container-half"></div>
     
-        <div id="quoteWrap">
-            <p id="displayedQuote"></p>
-        </div>
-       
-        <div id="container-half"></div>
-    </body>
+    <h1 style="text-align: center; font-style: bold; color: #696a6b">Did Trump Say It?</h1>
+
+    <div class="container-full"></div>
+
+    <div class="buttonWrapTrump">
+        <button id="actionButtonTrump-true" onclick="result(1)">Trump</button>
+    </div>
+
+    <div class="buttonWrapTrump">
+        <button id="actionButtonTrump-false" onclick="result(0)">Not Trump</button>
+    </div>
+      
+    <div class="container-half"></div>
+
+    <div class="quoteWrap">
+        <p id="displayedQuote"></p>
+    </div>
+   
+    <div class="container-half"></div>
+</body>
 </html>

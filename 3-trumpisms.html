@@ -2,20 +2,22 @@
 ---
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Trumpisms</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/trumpisms.css" />
+
         <meta title="Trumpisms">
         <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
         <meta image="https://moedus.github.io/assets/images/Trumpisms_p">
-
         <meta property="og:title" content="Trumpisms" />
         <meta property="og:url" content="https://moedus.github.io/3-trumpisms.html" />
         <meta property="og:image" content="https://moedus.github.io/assets/images/Trumpisms_p" />
-
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/trumpisms.css" />
+
     
          <script>
         
@@ -61,17 +63,17 @@
     
     <body id="trumpBG" background="/assets/images/Trumpism.svg">
         
-        <h3 style="color: #6b6464; ">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></h3>
+        <h3 style="color: #6b6464">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></h3>
 
-        <h1 style="text-align: center; font-style: bold ">Trumpisms</h1>
+        <h1 style="text-align: center; font-style: bold">Trumpisms</h1>
 
     <!-- Button to activate getTrumpQuote -->
-        <div id="buttonWrap">
+        <div class="buttonWrap">
             <button id="actionButton" onclick="getTrumpQuote()">Start</button>
         </div>
         
     <!-- Display current Trump quote in a text area -->
-        <div id="quoteWrap">
+        <div class="quoteWrap">
             <p id="displayedQuote"></p>
         </div>
 

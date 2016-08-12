@@ -6,50 +6,6 @@
     Trumpisms + Trump or Not
 ================================================== */
 
-p, h2, h1 {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-  text-transform: uppercase;
-}
-
-#navHome a {
-  color: #696a6b;
-  text-decoration: none;
-}
-
-#navHome a:hover {
-  
-  text-decoration: underline;
-}
-
-
-#actionButton {
-  width: 150px;
-  height: 75px;
-  background-color: #b8ffac;
-  border-radius: 5px;
-  
-  font-size: 24px;
-  text-align: center;
-  color: #6b6464;
-}
-
-#actionButton p {
-  padding-top: 15%;
-}
-
-#actionButton:hover {
-  background-color: brown;
-  color: #ffffff;
-}
-
-#buttonWrap {
-  max-width: 100%;
-  margin: 10% auto;
-  text-align: center;
-}
 
 #displayedQuote {
   width: 100%;
@@ -57,7 +13,7 @@ h1 {
   font-style: italic;
 }
 
-#quoteWrap {
+.quoteWrap {
   max-width: 100%;
   text-align: center;
   margin-right: 20%;
@@ -99,15 +55,7 @@ h1 {
   padding-top: 15%;
 }
 
-/*
-#actionButtonTrump-true:hover,
-#actionButtonTrump-false:hover {
-  background-color: rgba(55,101,200,1);
-  color: #ffffff;
-}
-*/
-
-#buttonWrapTrump {
+.buttonWrapTrump {
   width: 49%;
   max-width: 50%;
   text-align: center;
@@ -141,12 +89,12 @@ h1 {
   transition: all 0.0s ease;
 }
 
-#container-full {
+.container-full {
   max-width: 100%;
   margin: 10% auto;
 }
 
-#container-half {
+.container-half {
   max-width: 100%;
   margin: 5% auto;
 }
