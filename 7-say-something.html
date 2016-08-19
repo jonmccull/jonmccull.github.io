@@ -1,0 +1,96 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Say Something</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+    <style type="text/css">
+        .sayWhatInput {
+            width: 50%;
+            margin-left: auto;
+            text-align: center;
+
+            font-size: 24px;
+
+            border-bottom: aliceblue;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+
+        .sayWhatWrap {
+            width: 100%;
+            text-align: center;
+            margin: 25px 0 0 0;
+        }
+
+        #submitBtn {
+            margin: 15px;
+        }
+
+        .messageDisplay {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        .messageDisplay {
+            padding: 25px 0 0 0;
+        }
+
+        .actionButton {
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+            function retrieveAnswer() {
+                var message = document.getElementById("whatToSay").value;
+                document.getElementById("messageDisplay").innerHTML = message;
+            }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+	    <header>
+	        <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+	    </header>
+    </div>
+
+<!-- Present text field -->
+<!-- User inputs and submits text -->
+
+<div class="sayWhatWrap">
+    <form name="what-to-say" action="#" autocomplete="off">
+        <input class="sayWhatInput" id="whatToSay" type="question" placeholder="What do you want to say?"></button>
+        <br>
+        <button id="submitBtn" class="actionButton" onclick="retrieveAnswer()" action="click">Submit</button>
+    </form>
+</div>
+
+<!-- Text renders on site -->
+
+<div class="container-responsive">
+    <div class="messageDisplay">
+        <p id="messageDisplay"></p>
+    </div>
+</div>
+
+
+</body>
+</html>

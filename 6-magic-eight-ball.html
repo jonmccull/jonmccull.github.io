@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Magic Eight Ball</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/eightball.js"></script>
+    <script>
+        if (document.getElementById("#submitBtn")) {
+            var trigger = document.getElementById("#submitBtn");
+            trigger.addEventListener("click", testListener(), false);
+        }        
+
+       
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid" id="test">
+	    <header>
+	        <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+	    </header>
+    </div>
+
+<!-- Draw magic eight ball -->
+
+<!-- Text field to ask a question and submit -->
+
+<form name="ask-the-eightball">
+    <input type="text" name="question" placeholder="What do you want to know?"></button>
+    <button id="submitBtn" action="click">Submit</button>
+</form>
+
+<!-- Generate answer and display -->
+
+<!-- Let user submit new question and generate new answer-->
+
+
+</body>
+
+</html>

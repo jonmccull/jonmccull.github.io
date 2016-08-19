@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/trumpisms.css" />
+        <link rel="stylesheet" href="/css/main.css" />
 
         <meta title="Trumpisms">
         <meta name="description" content="America's favourite demagogue says some incredibly horrible things.">
@@ -56,27 +57,27 @@
             document.getElementById("displayedQuote").innerHTML = randomQuote;
             document.getElementById("actionButton").innerHTML = "Keep Going";
             }
-
         </script>
-
     </head>
     
-    <body id="trumpBG" background="/assets/images/Trumpism.svg">
+    <body class="trumpBG" background="/assets/images/Trumpism.svg">
         
-        <h3 style="color: #6b6464">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></h3>
+        <header>
+            <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+        </header>
+
+        <p class="navHome" style="color: #6b6464">References for many of the quotes found <a href="http://fusion.net/story/305204/donald-trump-best-worst-quotes/">here</a></p>
 
         <h1 style="text-align: center; font-style: bold">Trumpisms</h1>
 
     <!-- Button to activate getTrumpQuote -->
         <div class="buttonWrap">
-            <button id="actionButton" onclick="getTrumpQuote()">Start</button>
+            <button class="actionButton" onclick="getTrumpQuote()">Start</button>
         </div>
         
     <!-- Display current Trump quote in a text area -->
         <div class="quoteWrap">
             <p id="displayedQuote"></p>
         </div>
-
-
     </body>
 </html>

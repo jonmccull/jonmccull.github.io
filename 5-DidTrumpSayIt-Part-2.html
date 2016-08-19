@@ -17,31 +17,36 @@
     <script type="text/javascript" src="/scripts/trump-quotes.js"></script>
 </head>
 
-<body id="trumpBG" onload="createQuoteLibrary(); setDefault(); getQuote()">
-<header>
-    <p id="navHome" style="color: #696a6b"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
-</header>
+<div class="container-fluid">
+    <body class="trumpBG" onload="createQuoteLibrary(); setDefault(); getQuote()">
+        <header>
+            <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+        </header>
 
-<div class="container-half"></div>
-    
-    <h1 style="text-align: center; font-style: bold; color: #696a6b">Did Trump Say It?</h1>
+        <div class="container-half"></div>
+        
+        <h1 style="text-align: center; font-style: bold; color: #696a6b">Did Trump Say It?</h1>
 
-    <div class="container-full"></div>
+        <div class="container-full"></div>
 
-    <div class="buttonWrapTrump">
-        <button id="actionButtonTrump-true" onclick="result(1)">Trump</button>
-    </div>
+        <div class="buttonWrapTrump">
+            <button id="actionButtonTrump-true" onclick="result(1)">Trump</button>
+        </div>
 
-    <div class="buttonWrapTrump">
-        <button id="actionButtonTrump-false" onclick="result(0)">Not Trump</button>
-    </div>
-      
-    <div class="container-half"></div>
+        <div class="buttonWrapTrump">
+            <button id="actionButtonTrump-false" onclick="result(0)">Not Trump</button>
+        </div>
+          
+        <div class="container-half"></div>
 
-    <div class="quoteWrap">
-        <p id="displayedQuote"></p>
-    </div>
-   
-    <div class="container-half"></div>
-</body>
+        <div class="quoteWrap">
+            <p id="displayedQuote"></p>
+        </div>
+       
+        <div class="container-half"></div>
+        <div class="container-fluid">
+            <img class="position-bottom-right" style="width: 15%" src="/assets/images/trump-sassy.svg">
+        </div>
+    </body>
+</div>
 </html>

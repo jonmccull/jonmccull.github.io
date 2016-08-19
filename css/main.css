@@ -1,9 +1,23 @@
 ---
 ---
 
+/* Font variables */
+
+
 h1,h2,h3,h4,h5,h6,p, ol {
   font-family: 'Open Sans', sans-serif;
   color: #696a6b;
+}
+
+@import url(//db.onlinewebfonts.com/c/3f4943f4e662577a8113309f864540a4?family=ITC+Benguiat);
+
+@font-face {font-family: "ITC Benguiat";
+    src: url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.eot");
+    src: url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.svg#ITC Benguiat") format("svg");
 }
 
 h1 {
@@ -110,6 +124,10 @@ a:hover:before {
   margin: 0;
 }
 
+.navHome {
+  padding: 5px 0 0 5px;
+}
+
 .header-container {
   padding-bottom: 1%;
   margin: 0 3% 0 3%;
@@ -160,4 +178,8 @@ a:hover:before {
   text-align: center;
 }
 
-
+.position-bottom-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
