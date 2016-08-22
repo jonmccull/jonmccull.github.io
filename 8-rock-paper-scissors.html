@@ -1,0 +1,67 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors | Jon McCullough</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/rock-paper-scissors.js"></script>
+
+    <style>
+        .choice-btn-wrap {
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+        }
+
+        .rps-container {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .game-result {
+            padding: 5% 0 5% 0;
+            font-size: 4em;
+            text-align: center;
+        }
+
+        .comp-pick {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+	    <header>
+	        <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+	    </header>
+    </div>
+    <div class="container-fluid game-result comp-pick">
+        <p id="compChoiceDisplay"></p>
+    </div>
+    <div class="container-fluid game-result">
+        <p id="result">Pick your weapon</p>
+    </div>
+    <div class="container-fluid rps-container">
+        <div class="container-fluid choice-btn-wrap">
+            <button id="rock" class="actionButton" action="click">Rock</button>
+        </div>
+        <div class="container-fluid choice-btn-wrap">
+            <button id="paper" class="actionButton" onclick="newGame()" action="click">Paper</button>
+        </div>
+        <div class="container-fluid choice-btn-wrap">
+            <button id="scissors" class="actionButton" onclick="newGame()" action="click">Scissors</button>
+        </div>
+    </div>
+</body>
+</html>
