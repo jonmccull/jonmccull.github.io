@@ -16,7 +16,7 @@ function determineWinner(choice1,compChoice) {
     var winner;         
 
     if ( choice1 === compChoice ) { winner = tie; }
-        else if ( choice1 === rock  ) { 
+        else if ( choice1 === rock ) {
              if ( compChoice === paper ) { winner = paper }
              else { winner = rock }
         }
@@ -28,7 +28,6 @@ function determineWinner(choice1,compChoice) {
              if ( compChoice === rock ) { winner = rock }
              else { winner = scissors }
         }
-
     announceWinner(winner,compChoice);
 };
         
@@ -42,7 +41,7 @@ function announceWinner(winner,compChoice) {
 function getCompChoice() {
     compChoice = Math.floor(Math.random()*3);
 
-    if (compChoice === 1) { compChoice = rock } 
+    if (compChoice === 1) { compChoice = rock }
         else {
             if ( compChoice === 2) { compChoice = paper }
             else { compChoice = scissors }

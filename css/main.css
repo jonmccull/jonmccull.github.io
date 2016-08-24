@@ -9,17 +9,6 @@ h1,h2,h3,h4,h5,h6,p, ol {
   color: #696a6b;
 }
 
-@import url(//db.onlinewebfonts.com/c/3f4943f4e662577a8113309f864540a4?family=ITC+Benguiat);
-
-@font-face {font-family: "ITC Benguiat";
-    src: url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.eot");
-    src: url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/3f4943f4e662577a8113309f864540a4.svg#ITC Benguiat") format("svg");
-}
-
 h1 {
   text-transform: uppercase;
   display: block;

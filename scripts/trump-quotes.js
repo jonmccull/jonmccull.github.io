@@ -34,7 +34,8 @@ function createQuoteLibrary() {
                         "\"You know what? I'd literally never heard of the Crimea until last week.\"",
                         "\"NASA has done some good stuff – incredible – but what have they done for us lately?\"",
                         "\"Climate change is made up. Really, we're going to tax the hell out of clean energy.\"",
-                        "\"I think it would be pretty fun to be the last President ever.\""
+                        "\"I think it would be pretty fun to be the last President ever.\"",
+                        "\"I am the devil.\""
                     ];
 }
 
