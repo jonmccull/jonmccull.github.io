@@ -12,25 +12,33 @@ window.onload=function() {
     document.getElementById("paper").addEventListener("click", function() { newGame("paper"); }, false);
     document.getElementById("scissors").addEventListener("click", function() { newGame("scissors"); }, false); }
 
+// Logic to determine who won, Computer ("compChoice") or User ("choice1")
 function determineWinner(choice1,compChoice) {
-    var winner;         
+    var winner;
 
     if ( choice1 === compChoice ) { winner = tie; }
-        else if ( choice1 === rock ) {
-             if ( compChoice === paper ) { winner = paper }
-             else { winner = rock }
+    else {
+        switch(choice1) {
+            case rock:
+                if ( compChoice === paper ) { winner = paper }
+                else { winner = rock }
+                break;
+            case paper:
+                if ( compChoice === rock ) { winner = paper }
+                else { winner = scissors }
+                break;
+            case scissors:
+                if ( compChoice === rock ) { winner = rock }
+                else { winner = scissors }
+                break;
+            default:
+                winner = tie;
         }
-        else if ( choice1 === paper ) {
-             if ( compChoice === rock  ) { winner = paper }
-             else { winner = scissors }
-        }
-        else if ( choice1 === scissors ) {
-             if ( compChoice === rock ) { winner = rock }
-             else { winner = scissors }
-        }
+    }
     announceWinner(winner,compChoice);
 };
-        
+
+// Updates text in header with Computer's choice and who won this round        
 function announceWinner(winner,compChoice) {
     compChoiceDisplay.innerHTML = "Computer picks " + compChoice;
 
@@ -38,6 +46,7 @@ function announceWinner(winner,compChoice) {
     else { result.innerHTML = winner + " wins!"; }
 };
 
+// Randomly select the Computer's choice (rock, paper or scissors)
 function getCompChoice() {
     compChoice = Math.floor(Math.random()*3);
 
@@ -49,9 +58,7 @@ function getCompChoice() {
     return compChoice;
 };
 
+// Launch a new round
 function newGame(choice) {
     determineWinner(choice, getCompChoice());
 };
-
-        
-

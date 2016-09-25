@@ -1,0 +1,111 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/fizzBuzz.js"></script>
+
+
+<style type="text/css">
+        .sayWhatInput {
+            width: 50%;
+            margin-left: auto;
+            text-align: center;
+
+            font-size: 24px;
+
+            border-bottom: aliceblue;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+
+        .sayWhatWrap {
+            width: 100%;
+            text-align: center;
+            margin: 25px 0 0 0;
+        }
+
+        #submitBtn {
+            margin: 15px;
+        }
+
+        .messageDisplay {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+         .intro {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 24px;
+        }
+
+        .messageDisplay {
+            padding: 25px 0 0 0;
+        }
+
+        .actionButton {
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+
+   
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
+        </header>
+    </div>
+
+<div class="container-responsive">
+    <div class="intro">
+        <ol>
+            <li>- Numbers that are a mulitple of 3 will give you "Fizz"</li>
+            <li>- Numbers that are a mulitple of 5 will give you "Buzz"</li>
+            <li>- Numbers that are a mulitple of 3 <strong>and</strong> 5 will give you "FizzBuzz"</li>
+            <li>- Otherwise it will just print the number as is.</li>
+        </0l>
+        <br>
+        <hr>
+        <br>
+    </div>
+</div> 
+
+
+<div class="sayWhatWrap">
+    <form name="what-to-say" id="numbEntry" action="#" autocomplete="off">
+        <input class="sayWhatInput" id="numberEntry" type="question" placeholder="Give me a number"></button>
+        <br>
+        <button id="submitBtn" class="actionButton" action="click">Submit</button>
+    </form>
+</div>
+
+<!-- Text renders on site -->
+
+<div class="container-responsive">
+    <div class="messageDisplay">
+        <p id="messageDisplay"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
