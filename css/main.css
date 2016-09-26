@@ -114,7 +114,14 @@ a:hover:before {
 }
 
 .navHome {
-  padding: 5px 0 0 5px;
+  padding: 1em;
+}
+
+.intro {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
 }
 
 .header-container {
@@ -170,5 +177,11 @@ a:hover:before {
 .position-bottom-right {
   position: absolute;
   right: 0px;
+  bottom: 0px;
+}
+
+.position-bottom-left {
+  position: absolute;
+  left: 0px;
   bottom: 0px;
 }

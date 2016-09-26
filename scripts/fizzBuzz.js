@@ -1,9 +1,10 @@
 
-var messageDisplayDefault = "";
+var messageDisplayDefault = " ";
 
 // Set up event listener for numChoice submit.
 
 window.onload = function() {
+    
     document.getElementById("submitBtn").addEventListener("click", function() { 
     	analyseResult()
     }, false);

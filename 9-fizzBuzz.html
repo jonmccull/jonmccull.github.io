@@ -47,11 +47,12 @@
             text-transform: uppercase;
         }
 
-         .intro {
+        .rules {
             width: 100%;
             text-align: center;
             margin: 0 auto;
-            font-size: 24px;
+            font-size: 1em;
+            padding-bottom: 2em;
         }
 
         .messageDisplay {
@@ -62,48 +63,41 @@
             height: 40px;
             font-size: 20px;
         }
+
+        .mainContent {
+            margin-bottom: 75px;
+            padding: 25px 120px 50px 120px; 
+        }
     </style>
-
-   
-
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header>
-            <p class="navHome"><a href="https://jonmccull.github.io/">Back to jonmccull.github.io</a></p>
-        </header>
+    <div class="container-responsive mainContent">
+        <div class="intro">
+            <h2>FizzBuzz</h2>
+        </div>
+        <div class="rules">
+            <ol>
+                <li><p>Numbers that are a mulitple of 3 will give you "Fizz"</p></li>
+                <li><p>Numbers that are a mulitple of 5 will give you "Buzz"</p></li>
+                <li><p>Numbers that are a mulitple of 3 <strong>and</strong> 5 will give you "FizzBuzz"</p></li>
+                <li><p>Otherwise it will just print the number as is.</p></li>
+            </ol>
+        </div>
+
+        <div class="sayWhatWrap">
+            <form name="what-to-say" id="numbEntry" action="#" autocomplete="off">
+                <input class="sayWhatInput" id="numberEntry" type="question" placeholder="Give me a number"></button>
+                <br>
+                <button id="submitBtn" class="actionButton" action="click">Submit</button>
+            </form>
+        </div>
+
+        <div class="messageDisplay">
+            <p id="messageDisplay"></p>
+        </div>
+
+        <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
     </div>
-
-<div class="container-responsive" style="margin-bottom: 75px; padding: 25px 0 50px 0; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: grey;">
-    <div class="intro">
-        <h2>How it works...</h2>
-        <ol>
-            <li>- Numbers that are a mulitple of 3 will give you "Fizz"</li>
-            <li>- Numbers that are a mulitple of 5 will give you "Buzz"</li>
-            <li>- Numbers that are a mulitple of 3 <strong>and</strong> 5 will give you "FizzBuzz"</li>
-            <li>- Otherwise it will just print the number as is.</li>
-        </ol>
-    </div>
-</div> 
-
-
-<div class="sayWhatWrap">
-    <form name="what-to-say" id="numbEntry" action="#" autocomplete="off">
-        <input class="sayWhatInput" id="numberEntry" type="question" placeholder="Give me a number"></button>
-        <br>
-        <button id="submitBtn" class="actionButton" action="click">Submit</button>
-    </form>
-</div>
-
-<!-- Text renders on site -->
-
-<div class="container-responsive">
-    <div class="messageDisplay">
-        <p id="messageDisplay"></p>
-    </div>
-</div>
-
-
 </body>
 </html>
