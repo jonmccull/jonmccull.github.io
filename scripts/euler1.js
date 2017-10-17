@@ -6,8 +6,8 @@
 
 // Function to generate numbers in range and print them to console.
 
-function numList () {
-	var maxNum = document.getElementById("maxNumInput").value;
+function numList (maxNum) {
+	
 	var counter = 0;
 
 	while (counter >= maxNum) {
