@@ -1,0 +1,110 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FizzBuzz | Jon McCullough</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/fizzBuzz.js"></script>
+
+
+<style type="text/css">
+        .sayWhatInput {
+            width: 50%;
+            margin-left: auto;
+            text-align: center;
+
+            font-size: 24px;
+
+            border-bottom: aliceblue;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+
+        .body {
+            width: 100%;
+            text-align: center;
+            margin: 25px 0 0 0;
+        }
+
+        #submitBtn {
+            margin: 15px;
+        }
+
+        .messageDisplay {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        .rules {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 1em;
+            padding-bottom: 2em;
+        }
+
+        .messageDisplay {
+            padding: 25px 0 0 0;
+        }
+
+        .actionButton {
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .mainContent {
+            margin-bottom: 75px;
+            padding: 25px 120px 50px 120px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-responsive mainContent">
+        <div class="intro">
+            <h2>Euler 1</h2>
+        </div>
+        <div class="rules">
+            <ol>
+                <li>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</li>
+                <li>Find the sum of all the multiples of 3 or 5 below 1000.</li>
+                
+            </ol>
+        </div>
+
+        <div class="body">
+            
+<!-- User inputs the max number in the range -->
+
+            <form name="maxNumForm" action="#" autocomplete="off">
+                <input class="maxNumInput" type="question" placeholder="What's the max number?"></button>
+                <br>
+                <button id="submitBtn" class="actionButton" onclick="numList()" action="click">Submit</button>
+            </form>
+        </div>
+
+<!-- Print numbers generated -->
+
+        <div class="container-responsive">
+            <div class="numList">
+                <p id="numDisplay"></p>
+            </div>
+        </div>
+
+<!-- Footer -->
+        <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
+    </div>
+</body>
+</html>
