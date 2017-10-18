@@ -3,6 +3,10 @@ window.onload = function() { // Set up event listener for the new limit input.
     document.getElementById("submitBtn").addEventListener("click", function() { 
     	sumOfMultiples();
     }, false);
+
+    document.getElementById("resetBtn").addEventListener("click", function() { 
+    	resetPage();
+    }, false);
 }
 
 function getNewLimit() { // Get the new inputed number
@@ -34,4 +38,9 @@ function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, r
 	} else {
 	return false;
 	}
+}
+
+function resetPage() { // Clears state
+	document.getElementById("numDisplay").innerHTML = "";
+	document.getElementById("maxNumInput").placeholder = "How bout another?";
 }
