@@ -14,7 +14,7 @@ function getNewLimit() { // Get the new inputed number
 }
 
 function updateDisplay(sum) { // Update the sum displayed to user
-	document.getElementById("").innerHTML = "The new sum is " + sum;
+	document.getElementById("numDisplay").innerHTML = "The new sum is " + sum;
 }
 
 
