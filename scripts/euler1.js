@@ -21,7 +21,3 @@ function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, r
 		return num;
 	}
 }
-
-console.log = ("The sum is " + sumOfMultiples(1000));
-
-document.getElementByID("para").innerHTML = sumOfMultiples(1000);

@@ -72,12 +72,12 @@
 
 <script type="text/javascript">
     function calcNewSum() {
-        var newLimit = document.getElementsById('maxNumForm');
+        var newLimit = document.getElementsById("maxNumForm");
         var newSum;
 
         newSum = sumOfMultiples(newLimit);
 
-        document.getElementById('numDisplay').innerHTML = newSum;
+        document.getElementById("numDisplay").innerHTML = newSum;
     }
 
 </script>
@@ -93,19 +93,18 @@
             <ol>
                 <li>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</li>
                 <br>
-                <li>Find the sum of all the multiples of 3 or 5 below 1000.</li>
+                <li>Find the sum of all the multiples of 3 or 5 below the inputed number.</li>
             </ol>
         </div>
 
         <div class="body">
-        <!-- Test -->
             
-<!-- User inputs the max number in the range -->
+<!-- User inputs the max number -->
 
             <form name="maxNumForm" action="#" autocomplete="off">
-                <input class="maxNumInput" type="number" placeholder="What's the max number?"></button>
+                <input class="maxNumInput" type="text" placeholder="What's the max number?"></button>
                 <br>
-                <button id="submitBtn" class="actionButton" onclick="recordNum()" action="click">Submit</button>
+                <button id="submitBtn" class="actionButton" onclick="calcNewSum()" action="click">Submit</button>
             </form>
         </div>
 
