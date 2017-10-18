@@ -2,9 +2,7 @@
 window.onload = function() { // Set up event listener for the new limit input.
     
     document.getElementById("submitBtn").addEventListener("click", function() { 
-    	console.log("Button Clicked");
-    	sumOfMultiples()
-
+    	sumOfMultiples();
     }, false);
 }
 
