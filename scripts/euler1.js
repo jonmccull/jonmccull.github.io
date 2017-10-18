@@ -1,6 +1,4 @@
 
-
-
 window.onload = function() { // Set up event listener for the new limit input.
     
     document.getElementById("submitBtn").addEventListener("click", sumOfMultiples(), false);
@@ -24,7 +22,7 @@ function sumOfMultiples() { // Calc sum of all multiples, taking max number as i
 	var limit = getNewLimit();
 	var sum = 0;					
 
-	for (var i = 0; i < limit; i++) {
+	for (var i = 3; i < limit; i++) {
 		if (checkIfMultiple(i)) {
 			sum += i;
 		}
