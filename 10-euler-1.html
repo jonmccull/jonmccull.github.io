@@ -73,9 +73,12 @@
 <script type="text/javascript">
     function calcNewSum() {
         var newLimit = document.getElementById("maxNumForm");
-        var newSum;
+        
+        console.log("The new limit inputed was " + newLimit); // debugging
 
-        newSum = sumOfMultiples(newLimit);
+        var newSum = sumOfMultiples(newLimit);
+
+
 
         document.getElementById("numDisplay").innerHTML = newSum;
     }

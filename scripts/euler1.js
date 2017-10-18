@@ -7,7 +7,7 @@
 function sumOfMultiples(limit) { // Calc sum of all multiples, taking max number as input. Returns a number.
 	var sum = 0;					
 
-	for (var i = 3; i <= limit; i++) {
+	for (var i = 3; i < limit; i++) {
 		if (checkIfMultiple(i)) {
 			sum += i;
 		} ;
