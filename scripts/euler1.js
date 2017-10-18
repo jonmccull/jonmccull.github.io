@@ -4,11 +4,10 @@ window.onload = function() { // Set up event listener for the new limit input.
     	sumOfMultiples();
     }, false);
 
-	window.onload = function() { // Set up event listener for the reset button
-	    document.getElementById("resetBtn").addEventListener("click", function() { 
-	    	resetPage();
-	    }, false);
-	}
+	
+    document.getElementById("resetBtn").addEventListener("click", function() { 
+    	resetPage();
+    }, false);
 }
 
 function getNewLimit() { // Get the new inputed number
