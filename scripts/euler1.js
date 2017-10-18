@@ -17,7 +17,6 @@ function updateDisplay(sum) { // Update the sum displayed to user
 	document.getElementById("numDisplay").innerHTML = "The new sum is " + sum;
 }
 
-
 function sumOfMultiples() { // Calc sum of all multiples, taking max number as input. Returns a number.
 	var limit = getNewLimit();
 	var sum = 0;					
@@ -29,6 +28,7 @@ function sumOfMultiples() { // Calc sum of all multiples, taking max number as i
 	}
 	
 	updateDisplay(sum);
+	console.log("The new sum is " + sum);
 }
 
 function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, returns a number.
