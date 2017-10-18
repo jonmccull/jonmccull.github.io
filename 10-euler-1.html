@@ -70,19 +70,6 @@
         }
     </style>
 
-<script type="text/javascript">
-    function calcNewSum() {
-        var newLimit = Number(document.getElementById("maxNumInput"));
-        
-        console.log("The new limit inputed was " + newLimit); // debugging
-
-        var newSum = sumOfMultiples(newLimit);
-
-        document.getElementById("numDisplay").innerHTML = newSum;
-    }
-
-</script>
-
 </head>
 
 <body>
@@ -105,7 +92,7 @@
             <form name="maxNumForm" action="#" autocomplete="off">
                 <input id="maxNumInput" type="text" placeholder="What's the max number?"></input>
                 <br>
-                <button id="submitBtn" class="actionButton" onclick="calcNewSum()" action="click">Submit</button>
+                <button id="submitBtn" class="actionButton" action="click">Submit</button>
             </form>
         </div>
 

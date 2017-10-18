@@ -1,10 +1,25 @@
-//
-// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-// Find the sum of all the multiples of 3 or 5 below 1000.
-//
 
 
-function sumOfMultiples(limit) { // Calc sum of all multiples, taking max number as input. Returns a number.
+
+window.onload = function() { // Set up event listener for the new limit input.
+    
+    document.getElementById("submitBtn").addEventListener("click", function() { 
+    	sumOfMultiples();
+    }, false);
+}
+
+function getNewLimit() { // Get the new inputed number
+	var newLimit = document.getElementById("maxNumInput").value;
+	return newLimit; 
+}
+
+function updateDisplay(sum) { // Update the sum displayed to user
+	document.getElementById("").innerHTML = "The new sum is " + sum;
+}
+
+
+function sumOfMultiples() { // Calc sum of all multiples, taking max number as input. Returns a number.
+	var limit = getNewLimit();
 	var sum = 0;					
 
 	for (var i = 3; i < limit; i++) {
@@ -12,8 +27,8 @@ function sumOfMultiples(limit) { // Calc sum of all multiples, taking max number
 			sum += i;
 		} ;
 	}
-
-	return sum;
+	
+	updateDisplay(sum);
 }
 
 function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, returns a number.
