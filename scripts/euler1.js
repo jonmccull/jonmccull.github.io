@@ -1,18 +1,25 @@
 
-window.onload = function() { // Sets up event listener for the new limit input.
+
+
+window.onload = function() { // Set up event listener for the new limit input.
+    
     document.getElementById("submitBtn").addEventListener("click", sumOfMultiples(), false);
 }
 
-function getNewLimit() { // Gets the new inputed number and returns it.
+function getNewLimit() { // Get the new inputed number
+	console.log("getNewLimit triggered");
+
 	var newLimit = document.getElementById("maxNumInput").value;
 	return newLimit; 
 }
 
-function updateDisplay(sum) { // Updates the sum displayed to user
+function updateDisplay(sum) { // Update the sum displayed to user
 	document.getElementById("numDisplay").innerHTML = "The new sum is " + sum;
 }
 
-function sumOfMultiples() { // Calcs sum of all multiples, taking max number as input. Returns a number.
+function sumOfMultiples() { // Calc sum of all multiples, taking max number as input. Returns a number.
+	
+	console.log("New sum calc started");
 
 	var limit = getNewLimit();
 	var sum = 0;					
