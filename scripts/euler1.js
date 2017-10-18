@@ -42,6 +42,6 @@ function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, r
 
 function resetPage() { // Clears state
 	document.getElementById("numDisplay").innerHTML = "";
-	var input = document.getElementByName("maxNumInput")[0].value = "";
+	var input = document.getElementById("maxNumInput")[0].value = "";
 	input.placeholder = "How bout another?";
 }
