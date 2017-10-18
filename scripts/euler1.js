@@ -4,27 +4,24 @@
 //
 
 
-// Function to generate numbers in range and print them to console.
+function sumOfMultiples(limit) { // Calc sum of all multiples, taking max number as input. Returns a number.
+	var sum = 0;					
 
-function numList (maxNum) {
-	
-	var counter = 0;
-
-	while (counter >= maxNum) {
-		console.log(counter);
-		maxNum++;
+	for (var i = 3; i <= limit; i++) {
+		if (checkIfMultiple(i)) {
+			sum += i;
+		} ;
 	}
 
+	return sum;
 }
 
-// Function to check if number is divisble by 3 or 5
-
-function divisbleCheck (number) {
-
-	if (number % 3) { } // divisible by 3, with no remainder
-
-	if (number % 5) { } // divisible by 5, with no remainder
-
-	if (number % 15) { } // divisible by 3 and 5, with no remainder
-
+function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, returns a number.
+	if (num % 3 === 0 || num % 5 === 0) {
+		return num;
+	}
 }
+
+console.log = ("The sum is " + sumOfMultiples(1000));
+
+document.getElementByID("para").innerHTML = sumOfMultiples(1000);
