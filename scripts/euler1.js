@@ -20,17 +20,12 @@ function updateDisplay(sum) { // Update the sum displayed to user
 }
 
 function sumOfMultiples() { // Calc sum of all multiples, taking max number as input. Returns a number.
-
 	var limit = getNewLimit();
 	var sum = 0;					
 
 	for (var i = 3; i < limit; i++) {
-		if (checkIfMultiple(i)) {
-			sum += i;
-		}
-	}
-	
-	updateDisplay(sum);
+		if ( checkIfMultiple(i) ) { sum += i; }
+	} updateDisplay(sum);
 }
 
 function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, returns a number.
