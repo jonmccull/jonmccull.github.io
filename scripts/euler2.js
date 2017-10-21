@@ -20,9 +20,9 @@ function generateFibList(limit) { // Create an array of Fib numbers not exceding
 }
 
 function calcSum(fibList) { // Calculates sum of all numbers in an array. Returns a number.
-	var sum = 0;
+	var sum, i = 0;
 
-	for (var i = 0; i <= fibList.length - 1 ; i++) {
+	for (i; i <= fibList.length - 1 ; i++) {
 		if (fibList[i] % 2 === 0) { sum += fibList[i]; }
 	} return sum;
 }
