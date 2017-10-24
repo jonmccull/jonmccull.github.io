@@ -4,9 +4,13 @@
 /* Font variables */
 
 
-h1,h2,h3,h4,h5,h6,p, ol {
+p, ol {
   font-family: 'courier', sans-serif;
   color: #696a6b;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -150,6 +154,7 @@ a:hover:before {
 /* Centered Action Button with full width wrapper */
 
 .actionButton {
+  font-family: 'Lato', sans-serif;
   width: 150px;
   height: 75px;
   background-color: #b8ffac;
