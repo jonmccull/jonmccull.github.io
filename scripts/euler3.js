@@ -1,7 +1,3 @@
-// The prime factors of 13195 are 5, 7, 13 and 29.
-
-// What is the largest prime factor of the number 600851475143 ?
-
 
 window.onload = function() { // Set up event listener for the new limit input.
     document.getElementById("submitBtn").addEventListener("click", function() { 
@@ -32,5 +28,5 @@ function getMaxOfArray(numArray) { // Finds the max number in an array. Returns 
 }
 
 function updateDisplay(maxPrime) { // Displays the max prime of the new limit in HTML.
-	document.getElementById("numDisplay").innerHTML = "The largets prime number is " + maxPrime;	
+	document.getElementById("numDisplay").innerHTML = "The largest prime number is " + maxPrime;	
 }

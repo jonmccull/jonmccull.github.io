@@ -1,0 +1,117 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Euler Problem 3 | Jon McCullough</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,300' rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/euler7.js"></script>
+
+
+<style type="text/css">
+        .sayWhatInput {
+            width: 50%;
+            margin-left: auto;
+            text-align: center;
+
+            font-size: 24px;
+
+            border-bottom: aliceblue;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+
+        .body {
+            width: 100%;
+            text-align: center;
+            margin: 25px 0 0 0;
+        }
+
+        #submitBtn {
+            margin: 15px;
+        }
+
+        .messageDisplay {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        .rules {
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+            font-size: 1em;
+            padding-bottom: 2em;
+        }
+
+        .messageDisplay {
+            padding: 25px 0 0 0;
+        }
+
+        .actionButton {
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .mainContent {
+            margin-bottom: 75px;
+            padding: 25px 120px 50px 120px; 
+        }
+
+        .numList {
+            text-align: center;
+            font-size: 24px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container-responsive mainContent">
+        <div class="intro">
+            <h2>Euler Problem 3</h2>
+        </div>
+        <div class="rules">
+            <ol>
+                <li>The prime factors of 13195 are 5, 7, 13 and 29.</li>
+                <br>
+                <li>What is the largest prime factor of the number 600851475143</li>
+            </ol>
+        </div>
+
+        <div class="container-responsive">
+            
+<!-- User inputs the max number -->
+
+            <form name="startBtn" action="#" autocomplete="off">
+                <input id="maxNumInput" type="text" placeholder="Input number here"></input>
+                <br>
+                <button id="submitBtn" class="actionButton" action="click">Start</button>
+            </form>
+        </div>
+
+<!-- Print numbers generated -->
+
+        <div class="container-responsive">
+            <div class="numList">
+                <p id="numDisplay"></p>
+            </div>
+        </div>
+
+<!-- Footer -->
+        <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
+    </div>
+</body>
+</html>
