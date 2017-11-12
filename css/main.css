@@ -145,6 +145,39 @@ a:hover:before {
   margin: 0;
 }
 
+/* Body styling for experiment pages */
+
+.mainContent {
+  margin-bottom: 75px;
+  padding: 25px 120px 50px 120px; 
+}
+
+.rules {
+  width: 50%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1em;
+  padding-bottom: 2em;
+}
+
+.experiment-body {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 0 0;
+}
+
+.startBtn {
+  width: 50%;
+  margin-left: auto;
+  text-align: center;
+
+  font-size: 24px;
+
+  border-bottom: aliceblue;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
 /* Body styling on home page */
 
 .homeBody {
