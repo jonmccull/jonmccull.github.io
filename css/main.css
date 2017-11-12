@@ -151,6 +151,10 @@ a:hover:before {
   background-color: aliceblue;
 }
 
+.align--center {
+  text-align: center;
+}
+
 /* Centered Action Button with full width wrapper */
 
 .actionButton {
