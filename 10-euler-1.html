@@ -31,7 +31,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/scripts/euler1.js"></script>
+    <script async type="text/javascript" src="/scripts/euler1.js"></script>
 
 </head>
 
@@ -53,9 +53,9 @@
             <form name="maxNumForm" action="#" autocomplete="off">
                 <input id="js-maxNumInput" class="maxNumInput" type="text" placeholder="Enter a max number"></input>
                 <br>
-                <button id="js-submitBtn" class="actionButton align--center" action="click" onclick="sumOfMultiples()">Submit</button>
+                <button id="js-submitBtn" class="actionButton align--center" action="click">Submit</button>
                 <br>
-                <button id="js-resetBtn" class="actionButton align--center" action="click" onclick="resetPage()">Reset</button>
+                <button id="js-resetBtn" class="actionButton align--center" action="click">Reset</button>
             </form>
         </div>
 
@@ -71,4 +71,10 @@
         <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
     </div>
 </body>
+
+<!-- Button click events -->
+    <script>
+        $( "#js-submitBtn" ).click( function() { sumOfMultiples() } );
+        $( "#js-resetBtn" ).click( function() { resetPage() } );
+    </script>
 </html>
