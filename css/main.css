@@ -166,6 +166,15 @@ a:hover:before {
   margin: 25px 0 0 0;
 }
 
+#maxNumInput {
+  font-size: 16px;
+  width: 50%;
+  text-align: center;
+  font-style: italic;
+  border: 1px solid #f1f1f1;
+
+}
+
 .startBtn {
   width: 50%;
   margin-left: auto;
@@ -176,6 +185,15 @@ a:hover:before {
   border-bottom: aliceblue;
   border-bottom-width: 2px;
   border-bottom-style: solid;
+}
+
+#submitBtn {
+    margin: 15px;
+}
+
+.numList {
+  text-align: center;
+  font-size: 24px;
 }
 
 /* Body styling on home page */
@@ -192,11 +210,11 @@ a:hover:before {
 
 .actionButton {
   font-family: 'Lato', sans-serif;
-  width: 150px;
-  height: 75px;
+  width: 160px;
+  height: 40px;
   background-color: #b8ffac;
   border-radius: 5px;	
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: #6b6464;
 }
