@@ -54,7 +54,7 @@
 <!-- User inputs the max number -->
 
             <form name="startBtn" action="#" autocomplete="off">
-                <button id="submitBtn" class="actionButton" action="click" onclick="newCalc(4000000)">Start</button>
+                <button id="submitBtn" class="actionButton" action="click">Start</button>
             </form>
         </div>
 
@@ -70,4 +70,10 @@
         <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
     </div>
 </body>
+
+<!-- Button click event-->
+    <script>
+        $( "#submitBtn").click( function() { newCalc(4000000) } );
+        $( "#js-resetBtn" ).click( function() { resetPage() } );
+    </script>
 </html>
