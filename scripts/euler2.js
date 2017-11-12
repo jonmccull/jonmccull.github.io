@@ -28,5 +28,5 @@ function calcSum(fibList) { // Calculates sum of all numbers in an array. Return
 }
 
 function updateDisplay(sum) { // Displays the sum of the new arrays elements in HTML.
-	document.getElementById("numDisplay").innerHTML = sum;	
+	document.getElementById("numDisplay").innerHTML = sum.toString();
 }
