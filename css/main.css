@@ -147,7 +147,7 @@ a:hover:before {
 
 /* Body styling for experiment pages */
 
-.mainContent {
+.main-content {
   margin-bottom: 75px;
   padding: 25px 120px 50px 120px; 
 }
@@ -166,7 +166,7 @@ a:hover:before {
   margin: 25px 0 0 0;
 }
 
-#maxNumInput {
+.maxNumInput {
   font-size: 16px;
   width: 50%;
   text-align: center;
@@ -187,18 +187,16 @@ a:hover:before {
   border-bottom-style: solid;
 }
 
-#submitBtn {
-    margin: 15px;
-}
-
-.numList {
-  text-align: center;
+.message-display {
+  width: 100%;
+  margin: 0 auto;
   font-size: 24px;
+  padding: 25px 0 0 0;
 }
 
 /* Body styling on home page */
 
-.homeBody {
+.home-body {
   background-color: aliceblue;
 }
 
@@ -215,8 +213,8 @@ a:hover:before {
   background-color: #b8ffac;
   border-radius: 5px;	
   font-size: 20px;
-  text-align: center;
   color: #6b6464;
+  margin: 15px;
 }
 
 .actionButton p {

@@ -1,10 +1,4 @@
 
-window.onload = function() { // Set up event listener for the new limit input.
-    document.getElementById("submitBtn").addEventListener("click", function() { 
-    	newCalc(4000000);
-    }, false);
-}
-
 function newCalc(limit) { // Generate new array, calculate the sum and update the display.
 	var fibList = generateFibList(limit);	
 	var sum = calcSum(fibList);
@@ -28,5 +22,5 @@ function calcSum(fibList) { // Calculates sum of all numbers in an array. Return
 }
 
 function updateDisplay(sum) { // Displays the sum of the new arrays elements in HTML.
-	document.getElementById("numDisplay").innerHTML = sum.toString();
+	document.getElementById("js-numDisplay").innerHTML = sum.toString();
 }

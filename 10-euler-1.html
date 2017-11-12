@@ -33,23 +33,6 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/scripts/euler1.js"></script>
 
-
-    <style type="text/css">
-
-        .messageDisplay {
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-
-        .messageDisplay {
-            padding: 25px 0 0 0;
-        }
-
-    </style>
-
 </head>
 
 <body>
@@ -58,11 +41,9 @@
             <h2>Euler Problem 1</h2>
         </div>
         <div class="rules">
-            <ol>
-                <li>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</li>
-                <br>
-                <li>Find the sum of all the multiples of 3 or 5 below the inputed number.</li>
-            </ol>
+            <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+            <br>
+            <p>Find the sum of all the multiples of 3 or 5 below the inputed number.</p>
         </div>
 
         <div class="experiment-body align--center">
@@ -70,19 +51,19 @@
 <!-- User inputs the max number -->
 
             <form name="maxNumForm" action="#" autocomplete="off">
-                <input id="maxNumInput" type="text" placeholder="Enter a max number"></input>
+                <input id="js-maxNumInput" class="maxNumInput" type="text" placeholder="Enter a max number"></input>
                 <br>
-                <button id="submitBtn" class="actionButton" action="click">Submit</button>
+                <button id="js-submitBtn" class="actionButton align--center" action="click" onclick="sumOfMultiples()">Submit</button>
                 <br>
-                <button id="resetBtn" name="resetBtn" class="actionButton" action="click">Reset</button>
+                <button id="js-resetBtn" class="actionButton align--center" action="click" onclick="resetPage()">Reset</button>
             </form>
         </div>
 
 <!-- Print numbers generated -->
 
         <div class="container-responsive">
-            <div class="numList">
-                <p id="numDisplay"></p>
+            <div class="message-display align--center">
+                <p id="js-numDisplay"></p>
             </div>
         </div>
 

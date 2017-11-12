@@ -1,22 +1,11 @@
 
-window.onload = function() { // Set up event listener for the new limit input.
-    document.getElementById("submitBtn").addEventListener("click", function() { 
-    	sumOfMultiples();
-    }, false);
-
-	
-    document.getElementById("resetBtn").addEventListener("click", function() { 
-    	resetPage();
-    }, false);
-}
-
 function getNewLimit() { // Get the new inputed number
-	var newLimit = document.getElementById("maxNumInput").value;
+	var newLimit = document.getElementById("js-maxNumInput").value;
 	return newLimit; 
 }
 
 function updateDisplay(sum) { // Update the sum displayed to user
-	document.getElementById("numDisplay").innerHTML = "The new sum is " + sum;
+	document.getElementById("js-numDisplay").innerHTML = "The new sum is " + sum;
 }
 
 function sumOfMultiples() { // Calc sum of all multiples, taking max number as input. Returns a number.
@@ -37,7 +26,7 @@ function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, r
 }
 
 function resetPage() { // Clears state
-	document.getElementById("numDisplay").innerHTML = "";
-	var input = document.getElementById("maxNumInput").value = "";
+	document.getElementById("js-numDisplay").innerHTML = "";
+	var input = document.getElementById("js-maxNumInput").value = "";
 	input.placeholder = "How bout another?";
 }
