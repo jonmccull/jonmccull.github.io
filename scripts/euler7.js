@@ -4,23 +4,25 @@
 
 window.onload = function() { // Set up event listener for the new limit input.
     document.getElementById("submitBtn").addEventListener("click", function() { 
-        getPrimes(document.getElementById("maxNumInput").value);
+        getPrimes(10001)
     }, false);
 }
 
 function getPrimes(num) {
-    var primes = [];
+    var primes = [1];
 
-    for (var i = 1; primes.legnth <= 10001 ; i++) {
-        if (isPrime(i)) { primes.push(i) }
+    for (var i = 1; primes.legnth <= num; i++) { // 6
+        if (isPrime(i)) {
+            primes.push(i);
+        }
     }
-console.log("the 10,001st prime is" + primes[10001]);
+console.log("the 10,001st prime is" + primes[num]);
 }
 
 function isPrime(num) {
-    var factors = [1, num];
+    var factors = [];
 
-    for (var i = num - 1; i < 0; i--){
+    for (var i = num - 1; i >= 0; i--){
         if (num % i == 0) { factors.push(i) }
     }
     
