@@ -14,7 +14,8 @@ function sumOfMultiples() { // Calc sum of all multiples, taking max number as i
 
 	for (var i = 3; i < limit; i++) {
 		if ( checkIfMultiple(i) ) { sum += i; }
-	} updateDisplay(sum);
+	} 
+	updateDisplay(sum);
 }
 
 function checkIfMultiple(num) { // Checks if a number is a multiple of 3 or 5, returns a number.

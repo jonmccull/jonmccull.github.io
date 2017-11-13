@@ -24,3 +24,9 @@ function calcSum(fibList) { // Calculates sum of all numbers in an array. Return
 function updateDisplay(sum) { // Displays the sum of the new arrays elements in HTML.
 	document.getElementById("js-numDisplay").innerHTML = sum.toString();
 }
+
+function resetPage() { // Clears state
+	document.getElementById("js-numDisplay").innerHTML = "";
+	var input = document.getElementById("js-maxNumInput").value = "";
+	input.placeholder = "How bout another?";
+}

@@ -6,7 +6,7 @@
 
 p, ol {
   font-family: 'courier', sans-serif;
-  color: #696a6b;
+  color: #121619;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -148,7 +148,7 @@ a:hover:before {
 /* Body styling for experiment pages */
 
 .main-content {
-  margin-bottom: 75px;
+  background-color: #F7F7F2;
   padding: 25px 120px 50px 120px; 
 }
 
@@ -194,6 +194,12 @@ a:hover:before {
   padding: 25px 0 0 0;
 }
 
+.site-footer {
+  background-color: #F7F7F2;
+  width: 100%;
+  height: auto;
+}
+
 /* Body styling on home page */
 
 .home-body {
@@ -210,11 +216,12 @@ a:hover:before {
   font-family: 'Lato', sans-serif;
   width: 160px;
   height: 40px;
-  background-color: #b8ffac;
+  background-color: #09814A;
   border-radius: 5px;	
   font-size: 20px;
-  color: #6b6464;
+  color: #F7F7F2;
   margin: 15px;
+  border-style: none;
 }
 
 .actionButton p {
@@ -222,8 +229,8 @@ a:hover:before {
 }
 
 .actionButton:hover {
-  background-color: brown;
-  color: #ffffff;
+  background-color: #C5D86D;
+  color: #121619;
 }
 
 .buttonWrap {
@@ -233,13 +240,13 @@ a:hover:before {
 }
 
 .position-bottom-right {
-  position: absolute;
+  position: sticky;
   right: 0px;
   bottom: 0px;
 }
 
 .position-bottom-left {
-  position: absolute;
+  position: sticky;
   left: 0px;
   bottom: 0px;
 }
