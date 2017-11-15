@@ -266,6 +266,8 @@ html, body {
     display: block;
     width: auto;
   }
+
+  h2 { margin-top: 0 }
 }
 
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }

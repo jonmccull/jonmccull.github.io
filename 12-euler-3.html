@@ -39,6 +39,10 @@
 </head>
 
 <body>
+    <div class="container-responsive">
+        <p class="navHome">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
+    </div>
+
     <div class="container-responsive main-content">
         <div class="intro">
             <h2>Euler Problem 3</h2>
@@ -52,14 +56,17 @@
         </div>
 
         <div class="container-responsive align--center">
-            
+
 <!-- User inputs the max number -->
 
             <form name="startBtn" action="#" autocomplete="off">
                 <input id="maxNumInput" class="placeholder-text" type="text" placeholder="Input number here"></input>
-                <br>
-                <button id="submitBtn" class="actionButton">Start</button>
             </form>
+            
+            <div class="container-responsive align--center">
+                <button id="submitBtn" class="actionButton">Start</button>
+            </div>
+
         </div>
 
 <!-- Print numbers generated -->
@@ -67,11 +74,6 @@
         <div class="message-display container-responsive align--center">
             <p id="numDisplay"></p>
         </div>
-
-<!-- Footer -->
-        <div class="site-footer container-responsive">
-            <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
-        </div> 
     </div>
 </body>
 </html>
