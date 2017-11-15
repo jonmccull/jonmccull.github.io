@@ -52,11 +52,11 @@
 
             <form name="maxNumForm" action="#" autocomplete="off">
                 <input id="js-maxNumInput" class="maxNumInput" type="text" placeholder="Enter a max number"></input>
-                <br>
-                <button id="js-submitBtn" class="actionButton align--center" action="click">Submit</button>
-                <br>
-                <button id="js-resetBtn" class="actionButton align--center" action="click">Reset</button>
             </form>
+            <div class="container-responsive align--center">
+                <button id="js-submitBtn" class="actionButton align--center">Submit</button>               
+                <button id="js-resetBtn" class="actionButton align--center">Reset</button>
+            </div>
         </div>
 
 <!-- Print numbers generated -->
@@ -70,11 +70,12 @@
             <p class="navHome position-bottom-left">Made by <a href="https://jonmccull.github.io/">Jon McCullough</a></p>
         </div>
     </div>
-</body>
 
 <!-- Button click events -->
     <script>
         $( "#js-submitBtn" ).click( function() { sumOfMultiples() } );
         $( "#js-resetBtn" ).click( function() { resetPage() } );
     </script>
+
+</body>
 </html>
