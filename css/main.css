@@ -113,6 +113,10 @@ a:hover:before {
 
 /* Main sections of project index page */
 
+html, body {
+  background-color: #F7F7F2;
+}
+
 .page-heading {
   margin: 0;
 }
@@ -149,7 +153,7 @@ a:hover:before {
 
 .main-content {
   background-color: #F7F7F2;
-  padding: 25px 120px 50px 120px; 
+  padding: 2%; 
 }
 
 .rules {
@@ -203,7 +207,7 @@ a:hover:before {
 /* Body styling on home page */
 
 .home-body {
-  background-color: aliceblue;
+  background-color: #F7F7F2;
 }
 
 .align--center {
@@ -250,3 +254,28 @@ a:hover:before {
   left: 0px;
   bottom: 0px;
 }
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
+  .main-content { padding: 10% 10% 10% 10% }
+  .rules { width: 100% }
+
+  .site-footer {
+    position: absolute;
+    bottom: 5%;
+    display: block;
+    width: auto;
+  }
+}
+
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+  .rules { width: 85% }
+}
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .rules { width: 75% }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+  .rules { width: 50% }
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
