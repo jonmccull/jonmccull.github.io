@@ -100,10 +100,10 @@ main {
   font-family: 'Lato', sans-serif;
   width: 160px;
   height: 40px;
-  background-color: #09814A;
+  background-color: ##00EA9C;
   border-radius: 5px; 
   font-size: 1em;
-  color: #F7F7F2;
+  color: #00EA9C;
   margin: 15px;
   border-style: none;
 }
@@ -114,7 +114,7 @@ main {
 
 .actionButton:hover {
   background-color: #C5D86D;
-  color: #121619;
+  color: #00EA9C;
 }
 
 .buttonWrap {
