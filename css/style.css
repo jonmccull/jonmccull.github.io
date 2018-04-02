@@ -103,7 +103,7 @@ main {
   background-color: #00EA9C;
   border-radius: 5px; 
   font-size: 1em;
-  color: #00EA9C;
+  color: #2A2DD2;
   margin: 15px;
   border-style: none;
 }
@@ -113,8 +113,8 @@ main {
 }
 
 .actionButton:hover {
-  background-color: #C5D86D;
-  color: #00EA9C;
+  background-color: #00EA9C;
+  color: #2A2DD2;
 }
 
 .buttonWrap {
