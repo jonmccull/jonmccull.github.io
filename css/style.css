@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #2A2DD2;
+  background: #2A2DD2 !important;
   color: white;
   font-size: 100%;
   line-height: 1.5;
