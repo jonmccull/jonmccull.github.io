@@ -257,7 +257,7 @@ html, body {
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
 
-  .main-content { padding: 10% 10% 10% 10% }
+  .main-content { padding: 5% 10% 10% 10% }
   .rules { width: 100% }
 
   .site-footer {
