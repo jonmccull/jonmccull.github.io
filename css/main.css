@@ -223,7 +223,7 @@ html, body {
   background-color: #09814A;
   border-radius: 5px;	
   font-size: 20px;
-  color: #F7F7F2;
+  color: #ffffff;
   margin: 15px;
   border-style: none;
 }
@@ -233,8 +233,8 @@ html, body {
 }
 
 .actionButton:hover {
-  background-color: #C5D86D;
-  color: #121619;
+  background-color: #09814A;
+  color: #ffffff;
 }
 
 .buttonWrap {
