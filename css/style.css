@@ -94,6 +94,41 @@ main {
   border-bottom: none;
 }
 
+/* Centered Action Button with full width wrapper */
+
+.actionButton {
+  font-family: 'Lato', sans-serif;
+  width: 160px;
+  height: 40px;
+  background-color: #09814A;
+  border-radius: 5px; 
+  font-size: 1em;
+  color: #F7F7F2;
+  margin: 15px;
+  border-style: none;
+}
+
+.actionButton p {
+  padding-top: 15%;
+}
+
+.actionButton:hover {
+  background-color: #C5D86D;
+  color: #121619;
+}
+
+.buttonWrap {
+  max-width: 100%;
+  margin: 10% auto;
+  text-align: center;
+}
+
+.message-display {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  padding: 25px 0 0 0;
+}
 
 /* The responsive bits, called media queries */
 @media screen and (max-width: 760px) { /* Screens 760px or less */
